@@ -1,6 +1,9 @@
 # Connect4 with Dice Game Analysis
 
 A computer vision system for analyzing Connect4 with Dice gameplay videos.
+![End Frame](<End Frame hard.png>)
+
+For more details read [report.md](<report.md>)
 
 ## Project Structure
 
@@ -30,7 +33,7 @@ pip install -r requirements.txt
 1. Place your game video in the `data` directory.
 2. Run the main script:
 ```bash
-python src/main.py
+python src/main.py --video data/your_video.mp4 --config config_tuned.yaml
 ```
 
 3. Check the `output` directory for:
@@ -39,11 +42,11 @@ python src/main.py
 
 ## Configuration
 
-The system uses the following default ROIs:
-- Dice ROI: (50, 50, 100, 100)
-- Grid ROI: (200, 50, 400, 500)
-
-To customize these values, modify them in `main.py` or create a configuration file.
+To customize the system's behavior, modify the configuration file (`config.yaml`) or use `app.py` by running:
+```bash
+streamlit run src/app.py --server.maxUploadSize 2000
+```  
+and customize parameters here.
 
 ## Features
 
