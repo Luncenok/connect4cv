@@ -1,0 +1,62 @@
+detection:
+  dice:
+    canny_high: 150
+    canny_low: 50
+    max_radius: 15
+    min_radius: 5
+  grid:
+    canny_high: 150
+    canny_low: 50
+    circle_detection:
+      max_radius: 50
+      min_dist: 10
+      min_radius: 5
+      param1: 10
+      param2: 15
+    color_threshold: 0.3
+    cols: 7
+    epsilon_factor: 0.02
+    grid_color_range:
+      lower:
+      - 100
+      - 90
+      - 90
+      upper:
+      - 125
+      - 255
+      - 255
+    hough_threshold: 50
+    max_line_gap: 10
+    min_line_length: 100
+    red_ranges:
+    - lower:
+      - 0
+      - 100
+      - 70
+      upper:
+      - 10
+      - 255
+      - 255
+    - lower:
+      - 170
+      - 100
+      - 20
+      upper:
+      - 180
+      - 255
+      - 255
+    rows: 6
+    yellow_range:
+      lower:
+      - 25
+      - 75
+      - 100
+      upper:
+      - 35
+      - 255
+      - 255
+output:
+  save_annotated_video: true
+video:
+  frame_rate: 30
+  stabilization: true
